@@ -2,14 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@layer base {
+  @font-face {
+    font-family: "Didot";
+    font-weight: "500";
+    src: url("../public/Didot.woff") format("woff");
+  }
+  @font-face {
+    font-family: "Gilroy";
+    font-weight: "600";
+    src: url("../public/Gilroy.ttf") format("ttf");
+  }
+}
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Gilroy";
+  font-size: 13px;
+  background-color: #ece8e1;
+  color: #4c473b;
 }
-
+h1 {
+  font-family: "Didot";
+  font-size: 20px;
+}
 a {
   color: inherit;
   text-decoration: none;

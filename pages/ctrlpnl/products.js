@@ -81,7 +81,7 @@ import { useState } from 'react';
     if (!session) {
         return {
             redirect: {
-                destination: `/api/auth/signin?callbackUrl=http://localhost:3000/ctrlpnl/products`,
+                destination: `/api/auth/signin?callbackUrl=${process.env.NEXTAUTH_URL}/ctrlpnl/products`,
                 permanent: false,
         }
         }

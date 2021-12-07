@@ -17,7 +17,7 @@ export default function Page({ data: session }) {
     <div>
       <Link href="/ctrlpnl/products">Control Panel</Link>
     </div>
-    <Link href="/api/aut/signout">
+    <Link href="/api/auth/signout">
     <a onClick = {e => {
           e.preventDefault()
           signOut()
@@ -31,7 +31,7 @@ export default function Page({ data: session }) {
   if (!session) {
     return (
       <div>
-      <Link href="/api/aut/signin">
+      <Link href="/api/auth/signin">
       <a onClick = {e => {
             e.preventDefault()
             signIn()
