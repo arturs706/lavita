@@ -2,7 +2,7 @@ import Stripe from "stripe"
 import Image from "next/image"
 import { useSelector, useDispatch } from 'react-redux'
 import { addToCart } from '../../redux/reducers/cartSlice'
-
+import { useRouter } from "next/router"
 
 
 export async function getStaticProps(context){
@@ -12,12 +12,14 @@ export async function getStaticProps(context){
     });
     const prices = await stripe.prices.list({
         active: true,
+        expand: ['data.product'],
       });
     const paramsPrice = `${params.priceId}`
     let product_price = prices.data.find(o => o.id === paramsPrice);
+   
 return {
     props: {
-        product_price
+        product_price,
     },
     revalidate: 10
 }
@@ -32,10 +34,10 @@ export async function getStaticPaths(){
       });
     
     const paths = prices.data.map(price => {
-        
+  
         return {
             params: {
-                priceId: `${price.id}`
+                priceId: `${price.id.toString()}`
             }
         }
     })
@@ -47,11 +49,18 @@ export async function getStaticPaths(){
 
 //getStaticProps
 
-export default function PriceId (props) { 
-    console.log(props)
-    return (
-        <div>{}</div>
-    )
+export default function PriceId (props) {
+    const router = useRouter();
+    if (router.isFallback){
+        return <h1>Loading...</h1>
+    }
+    if (props.product_price){
+        return (
+            <div>
+                <h1>{props.product_price.id}</h1>
+            </div>
+        )
+    }
 }
 
 
