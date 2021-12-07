@@ -47,50 +47,40 @@ export async function getStaticPaths(){
     }
 }
 
-//getStaticProps
 
-export default function PriceId (props) {
+export default function PriceId ({ product_price }) { 
     const router = useRouter();
     if (router.isFallback){
         return <h1>Loading...</h1>
     }
-    if (props.product_price){
-        return (
-            <div>
-                <h1>{props.product_price.id}</h1>
-            </div>
-        )
-    }
+    const counter = useSelector((state) => state.counter)
+    const dispatch = useDispatch();
+    const product_declared  = product_price.product;
+
+    return (
+        
+        <div className="h-screen">
+        <div className="flex flex-col items-center">
+            <div>{product_declared.name}</div>
+            
+            <Image
+                src={product_declared.images[0]}
+                alt={product_declared.name}
+                width={400}
+                height={400}
+            />
+            <div>Cena: €{((product_price.unit_amount) / 100).toFixed(2)}</div>
+            <button onClick = {() => dispatch(addToCart(product_declared.id))}>Add</button>
+
+        </div>
+        </div>
+    )
 }
 
 
 
 
-// export default function PriceId ({ product_price }) { 
-    
-//     const counter = useSelector((state) => state.counter)
-//     const dispatch = useDispatch();
-//     const product_declared  = product_price.product;
 
-//     return (
-        
-//         <div className="h-screen">
-//         <div className="flex flex-col items-center">
-//             <div>{product_declared.name}</div>
-            
-//             <Image
-//                 src={product_declared.images[0]}
-//                 alt={product_declared.name}
-//                 width={400}
-//                 height={400}
-//             />
-//             <div>Cena: €{((product_price.unit_amount) / 100).toFixed(2)}</div>
-//             <button onClick = {() => dispatch(addToCart(product_declared.id))}>Add</button>
-
-//         </div>
-//         </div>
-//     )
-// }
 
 
 
