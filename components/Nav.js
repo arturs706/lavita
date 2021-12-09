@@ -32,7 +32,7 @@ const Nav = ({session}) => {
         />
         </div>
         <div>
-        <h1 className = "pl-4">LAVITA</h1>
+        <h1 className = "pl-14">LAVITA</h1>
         </div>
        
         {/* <div>
