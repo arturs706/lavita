@@ -14,7 +14,7 @@ const Nav = ({session}) => {
       
 
         <div className="mx-2 mb-2 py-2 border-b border-yellow-700 flex justify-between items-center ">
-        <div className="z-50">
+        <div className="z-50 ">
         <Hamburger toggled={isOpen} toggle={setOpen} size={24} />
         </div>
         <div>
