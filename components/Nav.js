@@ -15,7 +15,21 @@ const Nav = ({session}) => {
 
         <div className="mx-2 mb-2 py-2 border-b border-yellow-700 flex justify-between items-center ">
         <div className="z-50 ">
-        <Hamburger toggled={isOpen} toggle={setOpen} size={24} />
+        <Hamburger 
+            toggled={isOpen} 
+            toggle={setOpen} 
+            size={24} 
+            easing="ease-in" 
+            duration={0.2} 
+            color="#4c473b"
+            onToggle={toggled => {
+                if (toggled) {
+                   <div className="z-50 absolute w-screen h-screen bg-red-500" ><h1>Hello World</h1></div>
+                } else {
+                    <div className="z-50 absolute">Hello World</div>
+                }
+              }}
+        />
         </div>
         <div>
         <h1 className = "pl-4">LAVITA</h1>
