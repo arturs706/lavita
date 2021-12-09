@@ -8,7 +8,7 @@ export default function Index({ prices }) {
         
         prices.data.map((price) =>
            
-        <div key = {price.id} className ="flex flex-wrap flex-row bg-yellow-900 w-full justify-center overflow-hidden">
+        <div key = {price.id} className ="flex flex-wrap flex-row w-full justify-center ">
             {
                 
             price.product.active === true

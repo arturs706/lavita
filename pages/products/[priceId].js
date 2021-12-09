@@ -5,7 +5,7 @@ import { addToCart } from '../../redux/reducers/cartSlice'
 import { useRouter } from "next/router"
 
 
-export default function PriceId ({ product_price }) { 
+export default function PriceId ({ product_price }) {
     const counter = useSelector((state) => state.counter)
     const dispatch = useDispatch();
     const router = useRouter();
@@ -27,7 +27,7 @@ export default function PriceId ({ product_price }) {
                 height={400}
             />
             <div>Cena: €{((product_price.unit_amount) / 100).toFixed(2)}</div>
-            <button onClick = {() => dispatch(addToCart(product_declared.id))}>Add</button>
+            <button onClick = {() => dispatch(addToCart(product_price))}>Add</button>
 
         </div>
         </div>

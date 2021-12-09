@@ -2,8 +2,11 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { getSession, signIn, signOut } from "next-auth/react"
 import { useSelector } from 'react-redux'
+import Hamburger from 'hamburger-react'
+import {useState} from 'react'
 
 const Nav = ({session}) => {
+    const [isOpen, setOpen] = useState(false)
     const counter = useSelector((state) => state.counter)
     // const [session, loading] = useSession()
     return (
@@ -11,15 +14,13 @@ const Nav = ({session}) => {
       
 
         <div className="mx-2 mb-2 py-2 border-b border-yellow-700 flex justify-between items-center ">
-        {/* Hamburger */}
-        <div className="cursor-pointer">
-        <div className = "w-8 h-0.5 bg-brand-900 my-1 duration-500 rounded-sm"></div>
-        <div className = "w-8 h-0.5 bg-brand-900 my-2 duration-500 rounded-sm"></div>
-        <div className = "w-8 h-0.5 bg-brand-900 my-1 duration-500 rounded-sm"></div>
+        <div className="z-50">
+        <Hamburger toggled={isOpen} toggle={setOpen} size={24} />
         </div>
-        <div> 
-        <h1 className = "pl-20">LAVITA</h1>
+        <div>
+        <h1 className = "pl-4">LAVITA</h1>
         </div>
+       
         {/* <div>
                 <Link href ="/"><a className='pr-8 text-base'>SĀKUMS</a></Link>
                 <Link href ="/products"><a className='pr-8 text-base'>PRECES</a></Link>
@@ -75,7 +76,7 @@ const Nav = ({session}) => {
             />
             {
                 counter.length > 0 
-                ? <div className="absolute top-7 text-xs px-1.5 rounded-full bg-brand-900 text-brand-50 right-3">1</div>
+                ? <div className="absolute top-7 text-xs px-1.5 rounded-full bg-brand-900 text-brand-50 right-3">{counter.length}</div>
                 : null
             }
             </div>
