@@ -32,7 +32,7 @@ const Nav = ({session}) => {
         />
         </div>
         <div>
-        <h1 className = "pl-14">LAVITA</h1>
+        <h2 className = "pl-14 pt-1">LAVITA</h2>
         </div>
        
         {/* <div>
@@ -50,7 +50,7 @@ const Nav = ({session}) => {
 
 
 
-        <div className='flex pr-2'>
+        <div className='flex pr-2 pt-1'>
 
         <div className="pr-2">
             <Link href="/myaccount">

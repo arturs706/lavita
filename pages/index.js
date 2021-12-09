@@ -18,8 +18,11 @@ export default function Page() {
       width={340}
       height={500}
      />
-     <h1></h1>
      </div>
+     <div className='absolute z-50 top-full'>     
+       <h1>LIELĀKAIS - AIZKARU - PIEDĀVĀJUMS - VENTSPILĪ - UN -  VISĀ - KURZEMĒ</h1>
+     </div>
+
     </div>
   )
   }
