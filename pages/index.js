@@ -5,7 +5,7 @@ export default function Page() {
     <div>
      
      <div className="px-3 flex flex-wrap-reverse w-full justify-evenly items-center h-screen">
-     <div className="flex flex-col w-full justify-start items-center h-96">
+     <div className="flex flex-col sm:w-full md:w-3/12 justify-start items-center sm:h-96">
      <h2 className = "text-5xl">Lavita Ventspils</h2>
      <br/>
       <h2 className = "text-5xl">Aizkaru veikals</h2>
