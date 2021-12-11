@@ -1,12 +1,12 @@
 import Nav from "./Nav"
-import Background from "./Background"
+
 const Layout = ({ children }) => {
     return (
-        <div>
+        <div className="bg-gradient-to-b from-orange-50	... w-full h-screen ">
             <Nav/>
             <main>
                 {children}
-            <Background/>
+
             </main>
         </div>
     )

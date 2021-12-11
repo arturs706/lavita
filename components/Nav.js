@@ -13,7 +13,7 @@ const Nav = ({session}) => {
         <div>
       
 
-        <div className="mx-2 mb-2 py-2 border-b border-yellow-700 flex justify-between items-center ">
+        <div className="mx-2 mb-2 py-2  flex justify-between items-center ">
         <div className="z-50 ">
         <Hamburger 
             toggled={isOpen} 
@@ -32,7 +32,7 @@ const Nav = ({session}) => {
         />
         </div>
         <div>
-        <h2 className = "pl-14 pt-1">LAVITA</h2>
+        <h2 className = "pl-14 pt-1 text-3xl">LAVITA</h2>
         </div>
        
         {/* <div>
