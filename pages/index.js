@@ -9,6 +9,14 @@ export default function Page() {
      <h2 className = "text-5xl">Lavita Ventspils</h2>
      <br/>
       <h2 className = "text-5xl">Aizkaru veikals</h2>
+      <br/>
+      <Image
+      src = "https://res.cloudinary.com/dyvgcv5se/image/upload/v1639213224/lavita/Untitled-8_gdmwjl.svg"
+      layout = "intrinsic"
+      alt="main image"
+      width = {100}
+      height = {100}
+      />
      </div>
      <div className = "opacity-80 ">
       <Image
@@ -21,6 +29,8 @@ export default function Page() {
      </div>
        
      </div>
+     
+
     </div>
   )
   }
