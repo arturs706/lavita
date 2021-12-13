@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { useRef, useEffect } from 'react';
 import { gsap, Power3 } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-
+import Carousel from "../components/Carousel"
 
 export default function Page() {
   let clickButton = useRef(null);
@@ -44,12 +44,11 @@ export default function Page() {
       </div>
     </div>
     <h2>Jaunums</h2>
-    <div className="px-3 flex flex-wrap w-full justify-evenly items-center h-screen">
-    
-    <div>
-    
+    <div className="">
+    <Carousel/>
     </div>
-    </div>
+    
+
 
     </div>
   )
