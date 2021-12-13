@@ -27,10 +27,27 @@ export const Carousel = () => {
   return (
     <div>
       <Swiper id="carousel"
+     breakpoints={{
+      // when window width is >= 640px
+      640: {
+        width: 640,
+        slidesPerView: 1,
+      },
+      // when window width is >= 768px
+      768: {
+        width: 768,
+        slidesPerView: 2,
+        spaceBetween: 10
+      },
+      1024: {
+        width: 1024,
+        slidesPerView: 3,
+        spaceBetween: 20
+      }
+    }}
      modules={[Navigation]}
-     spaceBetween={20}
-     slidesPerView={3}
      navigation
+     
       >
         
         {slides}
