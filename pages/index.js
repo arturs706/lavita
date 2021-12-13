@@ -1,24 +1,25 @@
 import Image from 'next/image'
 import { useRef, useEffect } from 'react';
-import { TweenMax, Power3 } from "gsap";
+import { gsap, Power3 } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
 
 export default function Page() {
   let clickButton = useRef(null);
+  gsap.registerPlugin(ScrollTrigger);
 
-  useEffect(()=>{
-    console.log(clickButton)
-  }, [])
+
+  useEffect(() => {gsap.to(clickButton,5,{opacity: 1,y: -20,ease: Power3.easeOut})}, [])
 
   return (
-  <div>
-     
+  <div className="overflow-hidden ">
     <div className="px-3 flex flex-wrap-reverse w-full justify-evenly items-center h-screen">
-      <div className="flex flex-col sm:w-full md:w-1/3 justify-start items-center sm:h-11/12 ">
-        <h2 className = "text-5xl">Lavita Ventspils</h2>
+      <div className="flex flex-col sm:w-full md:w-1/3 lg:w-1/2 justify-start items-center sm:h-11/12">
+        <h2 className = "text-4xl lg:text-6xl">Lavita Ventspils</h2>
         <br/>
-        <h2 className = "text-5xl">Aizkaru veikals</h2>
+        <h2 className = "text-4xl lg:text-6xl">Aizkaru veikals</h2>
         <br/>
-        <div className ="cursor-pointer" ref={el =>{clickButton = el}}>
+        <div className ="cursor-pointer" >
        
           <Image
             
@@ -31,7 +32,7 @@ export default function Page() {
         </div>
       </div>
 
-      <div className = "opacity-80 md:w-2/3 flex justify-end">
+      <div className = "opacity-0 md:w-1/2 flex justify-end items-center " ref={el =>{clickButton = el}}>
         <Image
           priority
           src = "https://res.cloudinary.com/dyvgcv5se/image/upload/v1639180455/lavita/unspalsh_hexc2b.jpg"
@@ -41,11 +42,16 @@ export default function Page() {
           height = {700}
         />
       </div>
-       
     </div>
-     
+    <h2>Jaunums</h2>
+    <div className="px-3 flex flex-wrap w-full justify-evenly items-center h-screen">
+    
+    <div>
+    
+    </div>
+    </div>
 
-  </div>
+    </div>
   )
   }
 //1425px

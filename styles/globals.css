@@ -31,6 +31,13 @@
   }
 }
 html,
+/* body {
+  padding: 0;
+  margin: 0;
+  font-family: "Didot";
+  font-size: 13px;
+  color: #ece8e1;
+} */
 body {
   padding: 0;
   margin: 0;

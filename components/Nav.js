@@ -13,7 +13,7 @@ const Nav = ({session}) => {
         <div>
       
 
-        <div className="mx-2 mb-2 py-2  flex justify-between items-center ">
+        <div className="mx-4 mb-2 py-4 flex justify-between items-center overflow-hidden">
         <div className="z-50 ">
         <Hamburger 
             toggled={isOpen} 
@@ -32,10 +32,10 @@ const Nav = ({session}) => {
         />
         </div>
         <div>
-        <h2 className = "pl-14 pt-1 text-3xl">LAVITA</h2>
+        <h2 className = " pt-1 text-4xl tracking-wider pl-8">LAVITA</h2>
         </div>
        
-        {/* <div>
+        {/* <div className="sm:hidden">
                 <Link href ="/"><a className='pr-8 text-base'>SĀKUMS</a></Link>
                 <Link href ="/products"><a className='pr-8 text-base'>PRECES</a></Link>
                 <Link href ="/contactus"><a className='pr-8 text-base'>SAZINĀTIES AR MUMS</a></Link>

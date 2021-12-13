@@ -7,7 +7,7 @@ content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
           50: '#ece8e1',
           900: '#4c473b',
         }
-      }
+      },
     },
   },
   variants: {
