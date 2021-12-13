@@ -13,7 +13,7 @@ export default function Page() {
 
   return (
   <div className="overflow-hidden ">
-    <div className="px-3 flex flex-wrap-reverse w-full justify-evenly items-center h-screen">
+    <div className="px-4 flex flex-wrap-reverse w-full justify-evenly items-center h-screen">
       <div className="flex flex-col sm:w-full md:w-1/3 lg:w-1/2 justify-start items-center sm:h-11/12">
         <h2 className = "text-4xl lg:text-6xl">Lavita Ventspils</h2>
         <br/>
@@ -43,8 +43,8 @@ export default function Page() {
         />
       </div>
     </div>
-    <h2>Jaunums</h2>
-    <div className="">
+    <h2 className = "px-4 py-14 text-4xl">Jaunums</h2>
+    <div className="mx-4">
     <Carousel/>
     </div>
     
