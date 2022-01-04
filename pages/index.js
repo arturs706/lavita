@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { useRef, useEffect } from 'react';
 import { gsap, Power3 } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import Fade from '../components/Fade'
 
 export default function Page() {
   let clickButton = useRef(null);
@@ -11,10 +12,10 @@ export default function Page() {
   useEffect(() => {gsap.to(clickButton,5,{opacity: 1,y: -20,ease: Power3.easeOut})}, [])
 
   return (
-  <div className="overflow-hidden ">
+  <div className="overflow-hidden">
     <div className="px-4 flex flex-wrap-reverse w-full justify-evenly items-center h-screen ">
       <div className="flex flex-col sm:w-full md:w-1/3 lg:w-1/2 justify-start items-center sm:h-11/12">
-        <h2 className = "text-4xl lg:text-6xl">Lavita Ventspils</h2>
+        <h2 className = "text-4xl lg:text-9xl">Lavita</h2>
         <br/>
         <h2 className = "text-4xl lg:text-6xl">Aizkaru veikals</h2>
         <br/>
@@ -41,13 +42,10 @@ export default function Page() {
           height = {700}
         />
       </div>
-    </div>
-    <h2 className = "px-4 py-14 text-4xl">Jaunums</h2>
-    <div className="mx-4">
-    </div>
-    
 
-
+    </div>
+    <div className = "second-div"></div>
+    <Fade/>
     </div>
   )
   }
