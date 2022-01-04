@@ -7,9 +7,6 @@ function Home() {
     
     <div>
     <div className="h-screen ">
-    {/* <div className="h-screen flex justify-center items-center	">
-      <h1 className="text-7xl sm:text-8xl lg:text-12xl">LAVITA</h1>
-    </div> */}
       <Lavitamain/>
       <Fade/>
       
