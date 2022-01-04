@@ -2,7 +2,7 @@ import {gsap} from 'gsap'
 import { useEffect, useRef } from 'react'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
-export const Fade = () => {
+const Fade = () => {
     const sections = [
         {
           title: 'Title 1',
