@@ -31,7 +31,7 @@ const Nav = ({session}) => {
               }}
         />
         </div>
-        <div className="w-2/3 flex justify-end lg:w-32">
+        <div className="w-2/3 md:w-1/2 flex justify-end lg:w-32">
         <h2 className = "text-5xl tracking-wider">LA</h2>
         </div>
        

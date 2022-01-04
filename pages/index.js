@@ -6,9 +6,33 @@ import Fade from '../components/Fade'
 
 export default function Page() {
   let clickButton = useRef(null);
+  let containerRef = useRef(null);
+  const spanRef = useRef(null);
+  const tl = gsap.timeline({});
   gsap.registerPlugin(ScrollTrigger);
-
-
+  useEffect(()=>{
+        tl.from(spanRef.current, {
+            duration: 1.6,
+            y: 400,
+            ease: "power4.out",
+            delay: 1,
+            skewY: -24,
+            stagger: {
+                amount: 20,
+            },
+        })
+    },[tl])
+  useEffect(()=>{
+    gsap.fromTo(containerRef.current,{
+      rotation: 0
+    },{
+      rotation: 360,
+      duration: 20,
+      repeat: -1,
+      ease: "linear"
+    })
+  })
+  useEffect(() => {gsap.fromTo(containerRef.current, {timeScale: 1}, {timeScale: 1, duration: 1})}, []);
   useEffect(() => {gsap.to(clickButton,5,{opacity: 1,y: -20,ease: Power3.easeOut})}, [])
 
   return (
@@ -24,19 +48,28 @@ export default function Page() {
     <div className="px-4 flex flex-wrap-reverse w-full lg:w-11/12 justify-evenly items-center h-screen">
       
       <div className="flex flex-col sm:w-full md:w-1/3 lg:w-1/3 justify-start items-center sm:h-11/12">
-        <h2 className = "text-8xl lg:text-9xl">Lavita</h2>
+        {/* <h2 className = "text-8xl lg:text-10xl">LAVITA</h2> */}
+        <div className="h-44 md:h-48 lg:h-64 overflow-hidden">
+          <span className="z-50">
+            <div ref={spanRef}>
+              <h1 className='text-9xl lg:text-10xl'>LAVITA</h1>
+              <h2 className = "text-4xl lg:text-5xl text-center">Aizkaru veikals</h2>
+            </div>
+          </span>
+        </div>
         <br/>
-        <h2 className = "text-4xl lg:text-5xl">Aizkaru veikals</h2>
+        
         <br/>
-        <div className ="cursor-pointer" >
+        <div className ="cursor-pointer" ref={containerRef}>
        
           <Image
             
-            src = "https://res.cloudinary.com/dyvgcv5se/image/upload/v1639213224/lavita/Untitled-8_gdmwjl.svg"
+            src = "https://res.cloudinary.com/dyvgcv5se/image/upload/v1641320331/lavita/CIRCLE_2_buldd0.svg"
             layout = "intrinsic"
             alt="main image"
-            width = {100}
-            height = {100}
+            width = {120}
+            height = {120}
+            
           />
         </div>
       </div>
