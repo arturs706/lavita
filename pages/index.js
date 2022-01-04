@@ -1,5 +1,5 @@
-import Fade from '../components/Fade'
-import Lavitamain from '../components/Lavitamain'
+import Fade from '../Components/Fade'
+import Lavitamain from '../Components/Lavitamain'
 
 function Home() {
 
