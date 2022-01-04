@@ -32,7 +32,7 @@ const Nav = ({session}) => {
         />
         </div>
         <div>
-        <h2 className = " pt-1 text-4xl tracking-wider pl-8">LAVITA</h2>
+        <h2 className = "text-5xl tracking-wider pl-12">LA</h2>
         </div>
        
         {/* <div className="sm:hidden">

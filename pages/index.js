@@ -12,10 +12,11 @@ export default function Page() {
   useEffect(() => {gsap.to(clickButton,5,{opacity: 1,y: -20,ease: Power3.easeOut})}, [])
 
   return (
-  <div className="overflow-hidden">
-    <div className="px-4 flex flex-wrap-reverse w-full justify-evenly items-center h-screen ">
-      <div className="flex flex-col sm:w-full md:w-1/3 lg:w-1/2 justify-start items-center sm:h-11/12">
-        <h2 className = "text-4xl lg:text-9xl">Lavita</h2>
+  <div className="overflow-hidden flex items-center flex-col ">
+    <div className="px-4 flex flex-wrap-reverse w-11/12 justify-evenly items-center h-screen ">
+      
+      <div className="flex flex-col sm:w-full md:w-1/3 lg:w-1/2 justify-start items-center sm:h-11/12 ">
+        <h2 className = "text-8xl lg:text-9xl ">Lavita</h2>
         <br/>
         <h2 className = "text-4xl lg:text-6xl">Aizkaru veikals</h2>
         <br/>
@@ -32,14 +33,14 @@ export default function Page() {
         </div>
       </div>
 
-      <div className = "opacity-0 md:w-1/2 flex justify-end items-center " ref={el =>{clickButton = el}}>
+      <div className = "opacity-0 md:w-1/2 flex justify-end items-center" ref={el =>{clickButton = el}}>
         <Image
           priority
-          src = "https://res.cloudinary.com/dyvgcv5se/image/upload/v1639180455/lavita/unspalsh_hexc2b.jpg"
+          src="https://res.cloudinary.com/dyvgcv5se/image/upload/v1639954913/Test/collov-home-design-js8AQlw71HA-unsplash_qj61bq.jpg"
           layout = "intrinsic"
           alt="main image"
-          width = {620}
-          height = {700}
+          width = {600}
+          height = {620}
         />
       </div>
 
