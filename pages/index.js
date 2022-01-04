@@ -48,7 +48,7 @@ export default function Page() {
           layout = "intrinsic"
           alt="main image"
           width = {600}
-          height = {640}
+          height = {600}
         />
       </div>
 
