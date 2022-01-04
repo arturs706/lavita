@@ -2,7 +2,6 @@ import Image from 'next/image'
 import { useRef, useEffect } from 'react';
 import { gsap, Power3 } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import Carousel from "../components/Carousel"
 
 export default function Page() {
   let clickButton = useRef(null);
@@ -45,7 +44,6 @@ export default function Page() {
     </div>
     <h2 className = "px-4 py-14 text-4xl">Jaunums</h2>
     <div className="mx-4">
-    <Carousel/>
     </div>
     
 
