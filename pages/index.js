@@ -8,6 +8,7 @@ export default function Page() {
   let clickButton = useRef(null);
   let containerRef = useRef(null);
   const spanRef = useRef(null);
+  const spanRef2 = useRef(null);
   const tl = gsap.timeline({});
   gsap.registerPlugin(ScrollTrigger);
   useEffect(()=>{
@@ -15,13 +16,20 @@ export default function Page() {
             duration: 1.6,
             y: 400,
             ease: "power4.out",
-            delay: 1,
+            delay: 0.1,
             skewY: -24,
-            stagger: {
-                amount: 20,
-            },
         })
     },[tl])
+    useEffect(()=>{
+      tl.from(spanRef2.current, {
+          duration: 1.6,
+          y: 400,
+          ease: "power4.out",
+          delay: 0.1,
+          skewY: -24,
+      })
+  },[tl])
+  
   useEffect(()=>{
     gsap.fromTo(containerRef.current,{
       rotation: 0
@@ -53,7 +61,7 @@ export default function Page() {
           <span className="z-50">
             <div ref={spanRef}>
               <h1 className='text-9xl lg:text-10xl'>LAVITA</h1>
-              <h2 className = "text-4xl lg:text-5xl text-center">Aizkaru veikals</h2>
+              <h2 className = "text-4xl lg:text-5xl text-center" ref={spanRef2}>Aizkaru veikals</h2>
             </div>
           </span>
         </div>
@@ -74,7 +82,7 @@ export default function Page() {
         </div>
       </div>
 
-      <div className = "opacity-0 md:w-1/2 flex justify-end items-center" ref={el =>{clickButton = el}}>
+      <div className = "opacity-0 md:w-1/2 flex justify-end items-center -z-10" ref={el =>{clickButton = el}}>
         <Image
           priority
           src="https://res.cloudinary.com/dyvgcv5se/image/upload/v1639954913/Test/collov-home-design-js8AQlw71HA-unsplash_qj61bq.jpg"
