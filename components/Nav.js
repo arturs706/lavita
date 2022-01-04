@@ -13,8 +13,8 @@ const Nav = ({session}) => {
         <div>
       
 
-        <div className="mx-4 mb-2 py-4 flex justify-between items-center overflow-hidden">
-        <div className="z-50 ">
+        <div className="mx-4 mb-2 py-4 flex justify-center lg:justify-between lg:items-center overflow-hidden">
+        <div className="z-50 fixed left-4">
         <Hamburger 
             toggled={isOpen} 
             toggle={setOpen} 
@@ -24,33 +24,33 @@ const Nav = ({session}) => {
             color="#4c473b"
             onToggle={toggled => {
                 if (toggled) {
-                   <div className="z-50 absolute w-screen h-screen bg-red-500" ><h1>Hello World</h1></div>
+                   <div className="z-50 absolute w-screen h-screen" ><h1>Hello World</h1></div>
                 } else {
                     <div className="z-50 absolute">Hello World</div>
                 }
               }}
         />
         </div>
-        <div>
-        <h2 className = "text-5xl tracking-wider pl-12">LA</h2>
+        <div className="w-1/2 flex justify-end lg:w-32">
+        <h2 className = "text-5xl tracking-wider pl-12 ">LA</h2>
         </div>
        
-        {/* <div className="sm:hidden">
-                <Link href ="/"><a className='pr-8 text-base'>SĀKUMS</a></Link>
-                <Link href ="/products"><a className='pr-8 text-base'>PRECES</a></Link>
-                <Link href ="/contactus"><a className='pr-8 text-base'>SAZINĀTIES AR MUMS</a></Link>
-                <Link href ="/location"><a className='pr-8 text-base'>ATRAŠANĀS VIETA</a></Link>
+        <div className="hidden lg:flex">
+                <Link href ="/"><a className='pr-8 text-xs'>SĀKUMS</a></Link>
+                <Link href ="/products"><a className='pr-8 text-xs'>PRECES</a></Link>
+                <Link href ="/contactus"><a className='pr-8 text-xs'>SAZINĀTIES AR MUMS</a></Link>
+                <Link href ="/location"><a className='pr-8 text-xs'>ATRAŠANĀS VIETA</a></Link>
                 {session
-                ? <Link href ="/api/auth/signout"><a className='pr-8 text-base'>IZIET</a></Link>
-                : <Link href ="/api/auth/signin"><a className='pr-8 text-base'>IELOGOTIES</a></Link>
+                ? <Link href ="/api/auth/signout"><a className='pr-8 text-xs'>IZIET</a></Link>
+                : <Link href ="/api/auth/signin"><a className='pr-8 text-xs'>IELOGOTIES</a></Link>
                 }
                 
-        </div> */}
+        </div>
         
 
 
 
-        <div className='flex pr-2 pt-1'>
+        <div className='flex pr-2 pt-1 justify-end items-center w-1/2 lg:w-1/12'>
 
         <div className="pr-2">
             <Link href="/myaccount">
@@ -59,8 +59,8 @@ const Nav = ({session}) => {
                 src="https://res.cloudinary.com/dyvgcv5se/image/upload/v1636281958/icons_3/Shopicons_Light_Account_ir9uel.svg"
                 alt="Login"
                 layout="fixed"
-                width={24}
-                height={24}
+                width={20}
+                height={20}
             />
             </a>
             </Link>
@@ -72,8 +72,8 @@ const Nav = ({session}) => {
                 src="https://res.cloudinary.com/dyvgcv5se/image/upload/v1638744273/icons/Shopicons_Light_Heart_pgaryx.svg"
                 alt="Login"
                 layout="fixed"
-                width={24}
-                height={24}
+                width={20}
+                height={20}
             />
             </a>
             </Link>
@@ -85,8 +85,8 @@ const Nav = ({session}) => {
                 src="https://res.cloudinary.com/dyvgcv5se/image/upload/v1636281970/icons_3/Shopicons_Light_Cart1_invsrl.svg"
                 alt="Shopping bag"
                 layout="fixed"
-                width={24}
-                height={24}
+                width={20}
+                height={20}
             />
             {
                 counter.length > 0 

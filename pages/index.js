@@ -12,13 +12,21 @@ export default function Page() {
   useEffect(() => {gsap.to(clickButton,5,{opacity: 1,y: -20,ease: Power3.easeOut})}, [])
 
   return (
-  <div className="overflow-hidden flex items-center flex-col ">
-    <div className="px-4 flex flex-wrap-reverse w-11/12 justify-evenly items-center h-screen ">
+  <div>
+  <div className="overflow-hidden flex">
+    <div className="w-1/12 h-screen justify-center flex-col items-center hidden lg:flex">
+      <div className="h-1/4 flex flex-col justify-between absolute left-8 top-72">
+          <h2 className=' skew-x-12'>FB</h2>
+          <h2 className=' skew-x-12'>IG</h2>
+          <h2 className=' skew-x-12'>VK</h2>
+      </div>
+    </div>
+    <div className="px-4 flex flex-wrap-reverse w-full lg:w-11/12 justify-evenly items-center h-screen">
       
-      <div className="flex flex-col sm:w-full md:w-1/3 lg:w-1/2 justify-start items-center sm:h-11/12 ">
-        <h2 className = "text-8xl lg:text-9xl ">Lavita</h2>
+      <div className="flex flex-col sm:w-full md:w-1/3 lg:w-1/3 justify-start items-center sm:h-11/12">
+        <h2 className = "text-8xl lg:text-9xl">Lavita</h2>
         <br/>
-        <h2 className = "text-4xl lg:text-6xl">Aizkaru veikals</h2>
+        <h2 className = "text-4xl lg:text-5xl">Aizkaru veikals</h2>
         <br/>
         <div className ="cursor-pointer" >
        
@@ -40,10 +48,12 @@ export default function Page() {
           layout = "intrinsic"
           alt="main image"
           width = {600}
-          height = {620}
+          height = {640}
         />
       </div>
 
+    </div>
+    
     </div>
     <div className = "second-div"></div>
     <Fade/>

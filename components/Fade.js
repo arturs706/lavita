@@ -41,7 +41,6 @@ export const Fade = () => {
                     trigger: el,
                     start: 'top bottom',
                     toggleActions: 'play none none reverse',
-                    markers: true
                 }
             });
      
