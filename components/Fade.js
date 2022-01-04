@@ -2,7 +2,8 @@ import {gsap} from 'gsap'
 import { useEffect, useRef } from 'react'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
-const Fade = () => {
+
+export default function Fade() {
     const sections = [
         {
           title: 'Title 1',
@@ -51,10 +52,9 @@ const Fade = () => {
         });
      
     }, []);
-
-
-return (
-    <div className="App ">
+    return (
+        <div>
+            <div className="App ">
         {
             sections.map(({title, subtitle, color}) => (
                 <div className={`h-screen flex justify-center`} key={title} ref={addToRefs}>
@@ -65,7 +65,6 @@ return (
             ))
         }
     </div>
-);
+        </div>
+    )
 }
-
-export default Fade
