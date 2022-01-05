@@ -1,6 +1,6 @@
-import {gsap} from 'gsap'
+import gsap from 'https://cdn.skypack.dev/gsap';
 import { useEffect, useRef } from 'react'
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { ScrollTrigger } from "https://cdn.skypack.dev/gsap/ScrollTrigger";
 
 export const Fade = () => {
     const sections = [

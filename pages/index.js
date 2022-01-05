@@ -1,8 +1,9 @@
 import Image from 'next/image'
 import { useRef, useEffect } from 'react';
-import { gsap, Power3 } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import gsap from 'https://cdn.skypack.dev/gsap';
+import { ScrollTrigger } from "https://cdn.skypack.dev/gsap/ScrollTrigger";
 import Fade from '../components/Fade'
+import Slider from '../components/Slider';
 
 export default function Page() {
   let clickButton = useRef(null);
@@ -41,7 +42,7 @@ export default function Page() {
     })
   })
   useEffect(() => {gsap.fromTo(containerRef.current, {timeScale: 1}, {timeScale: 1, duration: 1})}, []);
-  useEffect(() => {gsap.to(clickButton,5,{opacity: 1,y: -20,ease: Power3.easeOut})}, [])
+  useEffect(() => {gsap.to(clickButton,5,{opacity: 1,y: -20,ease: "Power3.easeOut"})}, [])
 
   return (
   <div>
@@ -96,8 +97,10 @@ export default function Page() {
     </div>
     
     </div>
+    <Slider/>
     <div className = "second-div"></div>
     <Fade/>
+    
     </div>
   )
   }
