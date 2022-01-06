@@ -13,16 +13,6 @@
     src: url("../public/ivymode-light.woff2") format("woff2");
   }
 }
-@layer utilities {
-  .clip-path-slant-down-right:hover {
-    clip-path: polygon(7% 7%, 93% 7%, 93% 93%, 7% 93%);
-    
-  },
-  .clip-path-container {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    transition: clip-path-slant-down-right 2s;
-  }
-}
 
 
 html,
@@ -39,7 +29,4 @@ h1 {
 * {
   box-sizing: border-box;
 }
-.jwpnavbar--scrolled {
-  height: 5rem;
-  background: rgb(255, 255, 255);
-}
+
