@@ -12,7 +12,7 @@ const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY)
       if (session){
       const details = session.user.email;
       const handleClick = async (event) => {
-          // Call the basckend to create the Checkout session.
+          // Call the backend to create the Checkout session.
           const { sessionId } = await fetch('/api/checkout-sessions', {
               method: 'POST',
               headers: { 'content-Type': 'application/json'},

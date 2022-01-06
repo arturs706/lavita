@@ -40,7 +40,7 @@ return (
         
                 <div className="h-screen flex flex-col justify-center" ref={addToRefs}>
                     <div className="text-6xl mb-12 flex justify-center">JAUNUMS</div>
-                    <div className="px-24">
+                    <div className="px-5 ">
                     <Swiper className = "sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg h-100"
                         breakpoints={{
                             // when window width is >= 640px
@@ -67,12 +67,12 @@ return (
                         
                         
             >
-                        <SwiperSlide className="w-2/12 h-24 bg-slate-700">Slide 1</SwiperSlide>
-                        <SwiperSlide className="w-2/12 h-24 bg-slate-700">Slide 2</SwiperSlide>
-                        <SwiperSlide className="w-2/12 h-24 bg-slate-700">Slide 3</SwiperSlide>
-                        <SwiperSlide className="w-2/12 h-24 bg-slate-700">Slide 4</SwiperSlide>
-                <   SwiperSlide className="w-2/12 h-24 bg-slate-700">Slide 5</SwiperSlide>
-                <SwiperSlide className="w-2/12 h-24 bg-slate-700">Slide 6</SwiperSlide>
+                        <SwiperSlide className="w-2/12 h-24 bg-orange-50">Slide 1</SwiperSlide>
+                        <SwiperSlide className="w-2/12 h-24 bg-orange-50">Slide 2</SwiperSlide>
+                        <SwiperSlide className="w-2/12 h-24 bg-orange-50">Slide 3</SwiperSlide>
+                        <SwiperSlide className="w-2/12 h-24 bg-orange-50">Slide 4</SwiperSlide>
+                        <SwiperSlide className="w-2/12 h-24 bg-orange-50">Slide 5</SwiperSlide>
+                        <SwiperSlide className="w-2/12 h-24 bg-orange-50">Slide 6</SwiperSlide>
             </Swiper>
             </div>
         </div>
