@@ -82,7 +82,7 @@ export default function Page() {
         </div>
       </div>
 
-      <div className = "opacity-0 md:w-1/2 flex justify-end items-center -z-10" ref={el =>{clickButton = el}}>
+      <div className = "opacity-0 md:w-1/2 flex justify-end items-center lg: pb-10 -z-10" ref={el =>{clickButton = el}}>
         <Image
           priority
           src="https://res.cloudinary.com/dyvgcv5se/image/upload/v1639954913/Test/collov-home-design-js8AQlw71HA-unsplash_qj61bq.jpg"

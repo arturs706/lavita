@@ -1,7 +1,7 @@
 import gsap from 'https://cdn.skypack.dev/gsap';
 import { useEffect, useRef } from 'react'
 import { ScrollTrigger } from "https://cdn.skypack.dev/gsap/ScrollTrigger";
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Navigation, Pagination, Scrollbar, A11y, Lazy } from 'swiper';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -14,7 +14,10 @@ export const Slider = () => {
     const addToRefs = useRef(null);
 
     gsap.registerPlugin(ScrollTrigger)
-    
+    useEffect(() => {
+        document.documentElement.style.setProperty("--swiper-theme-color", "#000")
+        document.documentElement.style.setProperty("--swiper-navigation-size", "26px")
+     }, [])
     useEffect(() => {
              
             gsap.fromTo(addToRefs.current, {
@@ -56,10 +59,12 @@ return (
                                 slidesPerView: 2
                             }
                           }}
-                        modules={[Navigation, Pagination, Scrollbar, A11y]}
+                        modules={[Navigation, Pagination, Scrollbar, A11y, Lazy]}
                         
                         navigation
                         
+                        preloadImages = {false}
+                        lazy = {true}
                         pagination={{ clickable: true }}
                         scrollbar={{ draggable: true }}
                         onSwiper={(swiper) => console.log(swiper)}
