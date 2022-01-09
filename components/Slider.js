@@ -1,7 +1,7 @@
 import gsap from 'https://cdn.skypack.dev/gsap';
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 import { ScrollTrigger } from "https://cdn.skypack.dev/gsap/ScrollTrigger";
-import { Navigation, Pagination, A11y, Lazy, Autoplay } from 'swiper';
+import { Pagination, A11y, Lazy, Autoplay } from 'swiper';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -71,18 +71,16 @@ return (
                 speed={1500}
                 preloadImages = {false}
                 breakpoints={{
-                    // when window width is >= 640px
-                                    768: {
-                                        width: 640,
-                                        slidesPerView: 1,
-                                    },
-                    // when window width is >= 768px
-                                    1024: {
-                                        width: 1024,
-                                        spaceBetween: 20,
-                                        slidesPerView: 2
-                                    }
-                                    }}
+                    768: {
+                        width: 640,
+                        slidesPerView: 1,
+                        },
+                    1024: {
+                        width: 1024,
+                        spaceBetween: 20,
+                        slidesPerView: 2
+                        }
+                }}
                 >
                 <SwiperSlide className="w-2/12 h-screen bg-orange-50">Slide 1</SwiperSlide>
                 <SwiperSlide className="w-2/12 h-screen bg-orange-50">Slide 2</SwiperSlide>
@@ -90,7 +88,6 @@ return (
                 <SwiperSlide className="w-2/12 h-screen bg-orange-50">Slide 4</SwiperSlide>
                 <SwiperSlide className="w-2/12 h-screen bg-orange-50">Slide 5</SwiperSlide>
                 <SwiperSlide className="w-2/12 h-screen bg-orange-50">Slide 6</SwiperSlide>
-                
             </Swiper>
             </div>
         </div>
