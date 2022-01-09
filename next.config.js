@@ -1,6 +1,6 @@
 module.exports = {
   experimental: {
-    urlImports: ['https://unpkg.com', 'https://cdn.skypack.dev', 'https://cdnjs.cloudflare.com']
+    urlImports: ['https://unpkg.com', 'https://cdn.skypack.dev', 'https://cdnjs.cloudflare.com', 'https://res.cloudinary.com']
   },
   reactStrictMode: true,
   images: {

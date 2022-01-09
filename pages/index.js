@@ -100,7 +100,10 @@ export default function Page() {
     <div className = "second-div"></div>
 
     <Slider/>
-    
+    <div>Vairak neka 50 orderi diena</div>
+    <div>Atrodamies Ventspils centraa</div>
+    <div>Vairak neka 20 gadi estabilshed</div>
+    <div>Labakas kvalitates produkti</div>
     </div>
   )
   }

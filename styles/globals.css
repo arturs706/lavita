@@ -13,8 +13,10 @@
     src: url("../public/ivymode-light.woff2") format("woff2");
   }
 }
-
-html 
+html {
+  --swiper-navigation-size: 4rem !important;
+}
+ 
 body {
   padding: 0;
   margin: 0;
@@ -27,4 +29,32 @@ h1 {
 }
 * {
   box-sizing: border-box;
+}
+.swiper-button-next {
+  background-image: url("https://res.cloudinary.com/dyvgcv5se/image/upload/v1641645262/lavita/arrowright_qbeotc.svg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  position: relative;
+}
+
+.swiper-button-prev {
+  background-image: url("https://res.cloudinary.com/dyvgcv5se/image/upload/v1641645262/lavita/arrowleft_scctkj.svg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+}
+.swiper-button-disabled::after {
+  display: none;
+}
+span::after {
+  display: none;
+}
+.swiper-pagination-bullet {
+  opacity: 0.5;
+  background-color: black !important;
+}
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background-color: black !important;
 }
