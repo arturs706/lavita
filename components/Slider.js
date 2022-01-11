@@ -2,7 +2,6 @@ import gsap from 'https://cdn.skypack.dev/gsap';
 import { useEffect, useRef } from 'react'
 import { ScrollTrigger } from "https://cdn.skypack.dev/gsap/ScrollTrigger";
 import { Pagination, A11y, Lazy, Autoplay } from 'swiper';
-
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';

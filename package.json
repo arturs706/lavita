@@ -8,6 +8,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ashthornton/asscroll": "^2.0.4",
     "@next-auth/mongodb-adapter": "^1.0.0",
     "@reduxjs/toolkit": "^1.6.2",
     "@stripe/stripe-js": "^1.21.2",

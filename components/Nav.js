@@ -2,35 +2,18 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { getSession, signIn, signOut } from "next-auth/react"
 import { useSelector } from 'react-redux'
-import Hamburger from 'hamburger-react'
-import {useState} from 'react'
+import HamburgerSVG from './HamburgerSVG'
 
 const Nav = ({session}) => {
-    const [isOpen, setOpen] = useState(false)
+    
     const counter = useSelector((state) => state.counter)
     // const [session, loading] = useSession()
     return (
         <div>
       
-
+        <HamburgerSVG/>
         <div className="mx-4 mb-2 py-4 flex justify-center lg:justify-between lg:items-center overflow-hidden">
-        <div className="z-50 fixed left-4">
-        <Hamburger 
-            toggled={isOpen} 
-            toggle={setOpen} 
-            size={24} 
-            easing="ease-in" 
-            duration={0.2} 
-            color="#4c473b"
-            onToggle={toggled => {
-                if (toggled) {
-                   <div className="z-50 absolute w-screen h-screen" ><h1>Hello World</h1></div>
-                } else {
-                    <div className="z-50 absolute">Hello World</div>
-                }
-              }}
-        />
-        </div>
+        
         <div className="w-2/3 md:w-1/2 flex justify-end lg:w-32">
         <h2 className = "text-5xl tracking-wider">LA</h2>
         </div>
@@ -115,3 +98,11 @@ export async function getServerSideProps(ctx) {
       },
     }
   }
+
+//   {
+//     isOpen 
+//     ?  <div className="bg-red-900 w-full h-full fixed m-0">
+//         <h1>Preces</h1>
+//        </div>
+//     :  <div className=""></div>
+// }

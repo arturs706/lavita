@@ -47,7 +47,7 @@ export default function Page() {
   <div>
   <div className="overflow-hidden flex">
     <div className="w-1/12 h-screen justify-center flex-col items-center hidden lg:flex">
-      <div className="h-1/4 flex flex-col justify-between absolute left-8 top-72">
+      <div className="h-1/3 flex flex-col justify-between absolute left-8 top-60">
           <h2 className=' skew-x-12'>FB</h2>
           <h2 className=' skew-x-12'>IG</h2>
           <h2 className=' skew-x-12'>VK</h2>
@@ -100,10 +100,10 @@ export default function Page() {
     <div className = "second-div"></div>
 
     <Slider/>
-    <div>Vairak neka 50 orderi diena</div>
-    <div>Atrodamies Ventspils centraa</div>
-    <div>Vairak neka 20 gadi estabilshed</div>
-    <div>Labakas kvalitates produkti</div>
+    <div>Vairāk nekā 15 pasūtijumu dienā</div>
+    <div>Atrodamies Ventspils centrā</div>
+    <div>Vairāk nekā 20 gadi</div>
+    <div>Labākās kvalitātes produkti</div>
     </div>
   )
   }
