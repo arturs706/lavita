@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { getSession, signIn, signOut } from "next-auth/react"
 import { useSelector } from 'react-redux'
-import HamburgerSVG from './HamburgerSVG'
+import Hamburger from './Hamburger'
 
 const Nav = ({session}) => {
     
@@ -11,7 +11,7 @@ const Nav = ({session}) => {
     return (
         <div>
       
-        <HamburgerSVG/>
+        <Hamburger/>
         <div className="mx-4 mb-2 py-4 flex justify-center lg:justify-between lg:items-center overflow-hidden">
         
         <div className="w-2/3 md:w-1/2 flex justify-end lg:w-32">
