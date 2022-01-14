@@ -6,6 +6,7 @@ const Hamburger = () => {
     const menuToggle_2Ref = useRef(null)
     const menuToggle_3Ref = useRef(null)
     const [isOpen, setIsOpen] = useState(false)
+    const menuRef = useRef(null)
 
     useEffect(()=> {
         if (isOpen) {
@@ -35,8 +36,15 @@ const Hamburger = () => {
         duration: .8,
         attr: { d: 'M0 2S175 1 500 1s500 1 500 1V0H0Z'},
         ease: 'power2.out',
-
-    })  
+    })
+    .to(menuRef.current,{
+        duration: 1,
+        y: 20,
+        autoAlpha:1,
+        ease: 'power2.out',
+        stagger: 1
+    })
+    
     } else {
         gsap.to(menuToggle_1Ref.current, 0.5,{
             attr: { d: "M10, 2 L2, 2" },
@@ -51,7 +59,7 @@ const Hamburger = () => {
         gsap.to(menuToggle_3Ref.current, 0.5,{
             attr:{d: "M10,8 L2,8"},
             x:1,
-            ease: 'power2.easeInOut'
+            ease: 'power2.easeInOut',
         }, 'start')
          
     }
@@ -74,17 +82,17 @@ const Hamburger = () => {
             isOpen
             ? <section className=" main-section fixed left-0 top-0 w-full h-screen overflow-hidden backdrop-blur-2xl ">
                 <div className="flex items-center justify-center h-full px-32 py-42">
-                <div className="h-full w-full absolute left-0 top-0 bg-black opacity-30"></div>
+                <div className="h-full w-full absolute left-0 top-0 bg-gradient-to-b from-orange-50	... opacity-90"></div>
                     <svg className="h-full w-full absolute left-0 top-0 " viewBox="0 10 1000 1000" preserveAspectRatio="none">
                     <path className="h-full w-full bluee fill-orange-50" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
                     </svg>
                     <nav className="relative z-50 text-center">
-                        <ul>
-                            <li><span className="text-white">SĀKUMS</span></li>
-                            <li><span className="text-white">PRECES</span></li>
-                            <li><span className="text-white">SAZINĀTIES AR MUMS</span></li>
-                            <li><span className="text-white">ATRAŠANĀS VIETA</span></li>
-                            <li><span className="text-white">IELOGOTIES</span></li>
+                        <ul className="opacity-0" ref={menuRef}>
+                            <li><span className="text-4xl">SĀKUMS</span></li>
+                            <li><span className="text-4xl">PRECES</span></li>
+                            <li><span className="text-4xl">SAZINĀTIES AR MUMS</span></li>
+                            <li><span className="text-4xl">ATRAŠANĀS VIETA</span></li>
+                            <li><span className="text-4xl">IELOGOTIES</span></li>
                         </ul>
                     </nav>
                 </div>
