@@ -99,14 +99,12 @@ export default function Page() {
     </div>
     
     </div>
-    
-    <div className = "second-div"></div>
-
     <Slider/>
-    <div>Vairāk nekā 15 pasūtijumu dienā</div>
-    <div>Atrodamies Ventspils centrā</div>
-    <div>Vairāk nekā 20 gadi</div>
-    <div>Labākās kvalitātes produkti</div>
+    <div className = "second-div" ></div>
+
+    
+  
+    
     </div>
   )
   }

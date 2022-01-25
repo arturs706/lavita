@@ -32,7 +32,7 @@ export const Slider = () => {
 
 return (
     
-    <div className="App ">
+    <div >
         <div className="h-screen flex flex-col justify-center" ref={addToRefs}>
             <div className="text-6xl mb-12 flex justify-center">JAUNUMS</div>
             <div className="px-5 ">

@@ -7,11 +7,14 @@ const Hamburger = () => {
     const menuToggle_3Ref = useRef(null)
     const [isOpen, setIsOpen] = useState(false)
     const menuRef = useRef(null)
-
-    useEffect(()=> {
+    
+    useEffect(()=> {  
         if (isOpen) {
+        document.getElementById("main-cont").style.overflowY = "hidden";     
         gsap.to(menuToggle_1Ref.current, 0.6,{
+            stroke: "white",
             attr: { d: "M8,2 L2,8" },
+            duration: 2,
             x:1,
             ease: 'power2.easeInOut'
         }, 'start')
@@ -21,6 +24,8 @@ const Hamburger = () => {
         
         gsap.to(menuToggle_3Ref.current, 0.6,{
             attr:{d: "M8,8 L2,2"},
+            stroke: "white",
+            duration: 2,
             x:1,
             ease: 'power2.easeInOut'
         }, 'start')
@@ -45,29 +50,35 @@ const Hamburger = () => {
         stagger: 1
     })
     
-    } else {
-        gsap.to(menuToggle_1Ref.current, 0.5,{
-            attr: { d: "M10, 2 L2, 2" },
-            x:1,
-            ease: 'power2.easeInOut'
-        }, 'start')
-        gsap.to(menuToggle_2Ref.current, 0.5,{
-            autoAlpha:1,
-            x:1
-        }, 'start')
-        
-        gsap.to(menuToggle_3Ref.current, 0.5,{
-            attr:{d: "M10,8 L2,8"},
-            x:1,
-            ease: 'power2.easeInOut',
-        }, 'start')
-         
-    }
+    } 
     },[isOpen])
 
+    useEffect(()=>{
+       if (!isOpen){
+            document.getElementById("main-cont").style.overflowY = "visible";  
+            gsap.to(menuToggle_1Ref.current, 0.5,{
+                attr: { d: "M10, 2 L2, 2" },
+                x:1,
+                stroke: "black",
+                ease: 'power2.easeInOut'
+            }, 'start')
+            gsap.to(menuToggle_2Ref.current, 0.5,{
+                autoAlpha:1,
+                x:1
+            }, 'start')
+            
+            gsap.to(menuToggle_3Ref.current, 0.5,{
+                attr:{d: "M10,8 L2,8"},
+                x:1,
+                stroke: "black",
+                ease: 'power2.easeInOut',
+            }, 'start')
+             
+        }
+    },[!isOpen])
 
     return (
-        <div className="fixed left-4 top-6 pointer z-10">
+        <div className="fixed left-4 top-6 pointer z-10" >
         <div className="fixed z-50">
             <button className="bg-transparent border-none cursor-pointer outline-0 no-underline"
                 onClick={() => setIsOpen(!isOpen)}>
@@ -80,19 +91,20 @@ const Hamburger = () => {
         </div>
         {
             isOpen
-            ? <section className=" main-section fixed left-0 top-0 w-full h-screen overflow-hidden backdrop-blur-2xl ">
+            ?
+            <section className=" main-section fixed left-0 top-0 w-full h-screen overflow-hidden backdrop-blur-2xl ">
                 <div className="flex items-center justify-center h-full px-32 py-42">
-                <div className="h-full w-full absolute left-0 top-0 bg-gradient-to-b from-orange-50	... opacity-90"></div>
+                <div className="h-full w-full absolute left-0 top-0 bg-black	... "></div>
                     <svg className="h-full w-full absolute left-0 top-0 " viewBox="0 10 1000 1000" preserveAspectRatio="none">
                     <path className="h-full w-full bluee fill-orange-50" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
                     </svg>
                     <nav className="relative z-50 text-center">
                         <ul className="opacity-0" ref={menuRef}>
-                            <li><span className="text-4xl">SĀKUMS</span></li>
-                            <li><span className="text-4xl">PRECES</span></li>
-                            <li><span className="text-4xl">SAZINĀTIES AR MUMS</span></li>
-                            <li><span className="text-4xl">ATRAŠANĀS VIETA</span></li>
-                            <li><span className="text-4xl">IELOGOTIES</span></li>
+                            <li><span className="text-4xl text-orange-50	">SĀKUMS</span></li>
+                            <li><span className="text-4xl text-orange-50	">PRECES</span></li>
+                            <li><span className="text-4xl text-orange-50	">SAZINĀTIES AR MUMS</span></li>
+                            <li><span className="text-4xl text-orange-50	">ATRAŠANĀS VIETA</span></li>
+                            <li><span className="text-4xl text-orange-50	">IELOGOTIES</span></li>
                         </ul>
                     </nav>
                 </div>
